@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Balda.GameMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Balda"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             FontFamily="/Balda;component/#Google Sans"
+             d:DesignHeight="800" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            
+        </Grid.RowDefinitions>
+        <materialDesign:ColorZone Mode="Light"
+                                  VerticalAlignment="Stretch"
+                                  HorizontalAlignment="Stretch"
+                                  VerticalContentAlignment="Stretch">
+            <TextBlock Text="Балда" FontSize="50" HorizontalAlignment="Center" />
+        </materialDesign:ColorZone>
+        <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
+                    Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom" Margin="20">
+            <materialDesign:PackIcon Kind="Play" />
+        </Button>
+    </Grid>
+</UserControl>
