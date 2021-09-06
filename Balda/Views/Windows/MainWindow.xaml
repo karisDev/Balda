@@ -1,28 +1,32 @@
 ﻿<Window x:Class="Balda.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="d"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        FontSize="15"   
-        FontFamily="/Balda;component/#Google Sans"
+        xmlns:vm="clr-namespace:Balda.ViewModels"
         xmlns:local="clr-namespace:Balda"
+        FontSize="15"
+        Title="{Binding Title}"
+        FontFamily="/Balda;component/#Google Sans"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Foreground="{DynamicResource MaterialDesignPaper}"
         Background="{DynamicResource MaterialDesignBackground}"
-        Title="MainWindow" Height="800" Width="600">
-    <materialDesign:Transitioner SelectedIndex="0" AutoApplyTransitionOrigins="True">
-        <Grid>
-            <local:GameField />
-        </Grid>
+        Height="800" Width="600">
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+    <materialDesign:Transitioner SelectedIndex="1" AutoApplyTransitionOrigins="True">
         <materialDesign:TransitionerSlide>
-            <materialDesign:TransitionerSlide.BackwardWipe>
-                <materialDesign:CircleWipe />
-            </materialDesign:TransitionerSlide.BackwardWipe>
             <materialDesign:TransitionerSlide.ForwardWipe>
-                <materialDesign:SlideWipe Direction="Right" />
+                <materialDesign:FadeWipe />
             </materialDesign:TransitionerSlide.ForwardWipe>
             <local:GameMenu />
+        </materialDesign:TransitionerSlide>
+        <materialDesign:TransitionerSlide>
+            <materialDesign:TransitionerSlide.BackwardWipe>
+                <materialDesign:FadeWipe />
+            </materialDesign:TransitionerSlide.BackwardWipe>
+            <local:GameField />
         </materialDesign:TransitionerSlide>
     </materialDesign:Transitioner>
 </Window>

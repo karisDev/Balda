@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Balda.GameField"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Balda"
+             mc:Ignorable="d" 
+             FontFamily="/Balda;component/#Google Sans"
+             Background="{DynamicResource MaterialDesignLightBackground}"
+             Foreground="{DynamicResource MaterialDesignLightForeground}"
+             d:DesignHeight="800" d:DesignWidth="600">
+    <Grid>
+        <TextBlock Text="Балда поле" FontSize="50" HorizontalAlignment="Center" />
+
+        <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
+                    Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Grid.Row="0" Grid.RowSpan="2" Margin="20">
+            <materialDesign:PackIcon Kind="Stop" />
+        </Button>
+    </Grid>
+</UserControl>

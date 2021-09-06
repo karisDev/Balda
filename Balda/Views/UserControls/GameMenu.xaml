@@ -7,21 +7,21 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d"
              FontFamily="/Balda;component/#Google Sans"
+             Background="{DynamicResource MaterialDesignDarkBackground}"
              d:DesignHeight="800" d:DesignWidth="600">
-    <Grid>
-        <Grid.RowDefinitions>
-            
-        </Grid.RowDefinitions>
-        <materialDesign:ColorZone Mode="Light"
-                                  VerticalAlignment="Stretch"
-                                  HorizontalAlignment="Stretch"
-                                  VerticalContentAlignment="Stretch">
-            <TextBlock Text="Балда" FontSize="50" HorizontalAlignment="Center" />
-        </materialDesign:ColorZone>
+    <Grid Margin="20">
+        <TextBlock Grid.ColumnSpan="3"
+                   Text="Балда меню"
+                   FontSize="50"
+                   HorizontalAlignment="Center"
+                   Foreground="{DynamicResource MaterialDesignPaper}" />
         <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
-                    Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Bottom" Margin="20">
+                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.ColumnSpan="3"
+                Grid.RowSpan="3"
+                Margin="20">
             <materialDesign:PackIcon Kind="Play" />
         </Button>
     </Grid>
