@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balda", "Balda\Balda.csproj", "{23E643F9-2B0E-464E-B077-424BF8400DA6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{F24454C4-9DBB-4EA5-913C-9B7492F5020E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaldaConsole", "BaldaConsole\BaldaConsole.csproj", "{963748F0-3052-4960-80BF-2712031BE79D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{23E643F9-2B0E-464E-B077-424BF8400DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23E643F9-2B0E-464E-B077-424BF8400DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23E643F9-2B0E-464E-B077-424BF8400DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{963748F0-3052-4960-80BF-2712031BE79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{963748F0-3052-4960-80BF-2712031BE79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{963748F0-3052-4960-80BF-2712031BE79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{963748F0-3052-4960-80BF-2712031BE79D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{963748F0-3052-4960-80BF-2712031BE79D} = {F24454C4-9DBB-4EA5-913C-9B7492F5020E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B36DE773-CD63-4F1B-86D6-E821663E2EC7}
