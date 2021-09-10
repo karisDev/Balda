@@ -11,12 +11,12 @@
              d:DesignHeight="800" d:DesignWidth="600">
     <Grid Margin="20">
         <TextBlock Grid.ColumnSpan="3"
-                   Text="Балда меню"
+                   Text="Очко"
                    FontSize="50"
                    HorizontalAlignment="Center"
                    Foreground="{DynamicResource MaterialDesignPaper}" />
         <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
-                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}"
+                Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Grid.ColumnSpan="3"

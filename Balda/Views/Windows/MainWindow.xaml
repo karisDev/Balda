@@ -18,15 +18,15 @@
     <materialDesign:Transitioner SelectedIndex="1" AutoApplyTransitionOrigins="True">
         <materialDesign:TransitionerSlide>
             <materialDesign:TransitionerSlide.ForwardWipe>
-                <materialDesign:FadeWipe />
+                <materialDesign:CircleWipe />
             </materialDesign:TransitionerSlide.ForwardWipe>
-            <local:GameMenu />
+            <local:GameField />
         </materialDesign:TransitionerSlide>
         <materialDesign:TransitionerSlide>
             <materialDesign:TransitionerSlide.BackwardWipe>
-                <materialDesign:FadeWipe />
+                <materialDesign:CircleWipe />
             </materialDesign:TransitionerSlide.BackwardWipe>
-            <local:GameField />
+            <local:GameMenu />
         </materialDesign:TransitionerSlide>
     </materialDesign:Transitioner>
 </Window>

@@ -11,14 +11,63 @@
              Foreground="{DynamicResource MaterialDesignLightForeground}"
              d:DesignHeight="800" d:DesignWidth="600">
     <Grid>
-        <TextBlock Text="Балда поле" FontSize="50" HorizontalAlignment="Center" />
-
-        <Button Style="{DynamicResource MaterialDesignFloatingActionButton}"
-                    Command="{x:Static materialDesign:Transitioner.MovePreviousCommand}"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Grid.Row="0" Grid.RowSpan="2" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Style="{StaticResource MaterialDesignIconButton}"
+                ToolTip="MaterialDesignIconButton"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="5">
+            <materialDesign:PackIcon Kind="Pause" />
+        </Button>
+        <Button Style="{StaticResource MaterialDesignIconButton}"
+                Command="{x:Static materialDesign:Transitioner.MoveNextCommand}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Margin="5">
             <materialDesign:PackIcon Kind="Stop" />
         </Button>
+        
+        <GroupBox x:Name="Bot2Status"
+                  VerticalAlignment="Top"
+                  Margin="5"
+                  Header=" "
+                  Grid.Column="2">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Очков: " />
+                <TextBlock x:Name="Bot2ScoreBox" Text="21" HorizontalAlignment="Center" />
+            </StackPanel>
+        </GroupBox>
+        <TextBlock Text="Бот 2"
+                   Grid.Column="2"
+                   HorizontalAlignment="Center"
+                   Margin="0,14,0,0"
+                   Foreground="{ DynamicResource MaterialDesignPaper }"/>
+
+        <GroupBox x:Name="Bot1Status"
+                  VerticalAlignment="Bottom"
+                  Margin="5"
+                  Header=" "
+                  Grid.Row="2">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Очков: " />
+                <TextBlock x:Name="Bot1ScoreBox" Text="21" HorizontalAlignment="Center" />
+            </StackPanel>
+        </GroupBox>
+        <TextBlock Text="Бот 1"
+                   Grid.Row="2"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Margin="0,126,0,0"
+                   Foreground="{ DynamicResource MaterialDesignPaper }"/>
+
     </Grid>
 </UserControl>

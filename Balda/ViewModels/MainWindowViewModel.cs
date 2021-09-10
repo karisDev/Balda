@@ -9,7 +9,7 @@ namespace Balda.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
-        private string _Title = "Балда";
+        private string _Title = "21";
         /// <summary>
         /// Заголовок окна
         /// </summary>
