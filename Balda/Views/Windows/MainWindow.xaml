@@ -9,8 +9,8 @@
         Title="{Binding Title}"
         FontFamily="/Balda;component/#Google Sans"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Foreground="{DynamicResource MaterialDesignPaper}"
-        Background="{DynamicResource MaterialDesignBackground}"
+        Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
         Height="800" Width="600">
     <Window.DataContext>
         <vm:MainWindowViewModel />

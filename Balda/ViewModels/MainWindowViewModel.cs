@@ -1,15 +1,18 @@
 ﻿using Balda.ViewModels.Base;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace Balda.ViewModels
 {
     internal class MainWindowViewModel : ViewModel
     {
-        private string _Title = "21";
+        private string _Title = "Блэкджек";
         /// <summary>
         /// Заголовок окна
         /// </summary>
@@ -21,5 +24,7 @@ namespace Balda.ViewModels
                                 OnPropertyChanged();*/
             set => Set(ref _Title, value);
         }
+
+        
     }
 }

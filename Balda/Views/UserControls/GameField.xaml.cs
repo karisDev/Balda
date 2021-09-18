@@ -23,6 +23,26 @@ namespace Balda
         public GameField()
         {
             InitializeComponent();
+            Flipping();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Flipper.IsFlipped = !Flipper.IsFlipped;
+        }
+        private async void Flipping()
+        {
+            while (true)
+            {
+                Flipper.IsFlipped = !Flipper.IsFlipped;
+                await Task.Delay(TimeSpan.FromMilliseconds(1500));
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            dialog.IsOpen = false;
         }
     }
 }
+

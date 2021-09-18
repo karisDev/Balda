@@ -30,7 +30,7 @@ namespace Balda.ViewModels.Base
         {
             if (!Disposing || _Disposed) return;
             _Disposed = true;
-            // Освобождение управляемых ресурсов
+            // Освобождение управляемых ресурсов из Garbage Collector
         }
     }
 }

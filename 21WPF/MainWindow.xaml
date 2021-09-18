@@ -56,30 +56,40 @@
                    HorizontalAlignment="Center"
                    Margin="0,14,0,0"
                    Foreground="{ DynamicResource MaterialDesignPaper }"/>
-        <materialDesign:Flipper x:Name="Flipper" Grid.Column="1" Grid.Row="1" 
-  materialDesign:ShadowAssist.ShadowDepth="Depth5">
+        <materialDesign:Flipper x:Name="Flipper" Grid.Column="1" Grid.Row="1" Width="80" Height="160"
+  materialDesign:ShadowAssist.ShadowDepth="Depth5" IsFlipped="False">
             <materialDesign:Flipper.FrontContent>
-                <Border Width="40" Height="80" Background="{DynamicResource MaterialDesignDarkBackground}"
+                <Border Width="80" Height="160" Background="White">
+                    <Border Margin="1,1,1,1" Width="80" Height="160" Background="{DynamicResource MaterialDesignDarkBackground}"
                         CornerRadius="5">
-                    <materialDesign:PackIcon Kind="Cards"
+                        <materialDesign:PackIcon Kind="Cards"
                                              HorizontalAlignment="Center"
                                              VerticalAlignment="Center"
                                              Height="auto"
-                                             Width="30"
-                                             Foreground="{DynamicResource MaterialDesignBackground}" />
-                    
+                                             Width="60"
+                                             Foreground="{DynamicResource MaterialDesignPaper}" />
+                    </Border>
                 </Border>
             </materialDesign:Flipper.FrontContent>
             <materialDesign:Flipper.BackContent>
-                <Button Content="Перевернуть обратно" Width="150"
-                        Command="{x:Static materialDesign:Flipper.FlipCommand}"/>
+                <Border Width="80" Height="160" Background="White">
+                    <Border Margin="1,1,1,1" Width="79" Height="159" Background="{DynamicResource MaterialDesignDarkBackground}"
+                        CornerRadius="5">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock  Text="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="50"/>
+                        </StackPanel>
+                    </Border>
+                </Border>
             </materialDesign:Flipper.BackContent>
         </materialDesign:Flipper>
-        <Button Content="Перевернуть" Width="150"
+
+        <Button Content="Перевернуть" Width="150" Grid.Row="1"
                 IsEnabled="True"
                 Style="{StaticResource MaterialDesignFlatAccentBgButton}"
                 Click="FlipButton" />
-        <StackPanel Orientation="Horizontal" 
+        <StackPanel x:Name="Bot2StackPanel"
+                    Orientation="Horizontal"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     Grid.Column="1" Grid.Row="2">
@@ -94,7 +104,6 @@
                                              Height="auto"
                                              Width="30"
                                              Foreground="{DynamicResource MaterialDesignBackground}" />
-                        <Button Opacity="10"  />
                     </Border>
                 </materialDesign:Flipper.FrontContent>
                 <materialDesign:Flipper.BackContent>
