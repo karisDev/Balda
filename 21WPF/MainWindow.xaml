@@ -1,0 +1,135 @@
+﻿<Window x:Class="_21WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:_21WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button Style="{StaticResource MaterialDesignIconButton}"
+                ToolTip="MaterialDesignIconButton"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="5">
+            <materialDesign:PackIcon Kind="Pause" />
+        </Button>
+        <GroupBox x:Name="Bot2Status"
+                  VerticalAlignment="Top"
+                  Margin="5"
+                  Header=" "
+                  Grid.Column="2">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Очков: " />
+                <TextBlock x:Name="Bot2ScoreBox" Text="21" HorizontalAlignment="Center" />
+            </StackPanel>
+        </GroupBox>
+        <TextBlock Text="Бот 2"
+                   Grid.Column="2"
+                   HorizontalAlignment="Center"
+                   Margin="0,14,0,0"
+                   Foreground="{ DynamicResource MaterialDesignPaper }"/>
+
+        <GroupBox x:Name="Bot1Status"
+                  VerticalAlignment="Top"
+                  Margin="5"
+                  Header=" "
+                  Grid.Row="2">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="Очков: " />
+                <TextBlock x:Name="Bot1ScoreBox" Text="21" HorizontalAlignment="Center" />
+            </StackPanel>
+        </GroupBox>
+        <TextBlock Text="Бот 1"
+                   Grid.Row="2"
+                   HorizontalAlignment="Center"
+                   Margin="0,14,0,0"
+                   Foreground="{ DynamicResource MaterialDesignPaper }"/>
+        <materialDesign:Flipper x:Name="Flipper" Grid.Column="1" Grid.Row="1" Width="80" Height="160"
+  materialDesign:ShadowAssist.ShadowDepth="Depth5" IsFlipped="False">
+            <materialDesign:Flipper.FrontContent>
+                <Border Width="80" Height="160" Background="White">
+                    <Border Margin="1,1,1,1" Width="80" Height="160" Background="{DynamicResource MaterialDesignDarkBackground}"
+                        CornerRadius="5">
+                        <materialDesign:PackIcon Kind="Cards"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center"
+                                             Height="auto"
+                                             Width="60"
+                                             Foreground="{DynamicResource MaterialDesignPaper}" />
+                    </Border>
+                </Border>
+            </materialDesign:Flipper.FrontContent>
+            <materialDesign:Flipper.BackContent>
+                <Border Width="80" Height="160" Background="White">
+                    <Border Margin="1,1,1,1" Width="79" Height="159" Background="{DynamicResource MaterialDesignDarkBackground}"
+                        CornerRadius="5">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock  Text="8" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="50"/>
+                        </StackPanel>
+                    </Border>
+                </Border>
+            </materialDesign:Flipper.BackContent>
+        </materialDesign:Flipper>
+
+        <Button Content="Перевернуть" Width="150" Grid.Row="1"
+                IsEnabled="True"
+                Style="{StaticResource MaterialDesignFlatAccentBgButton}"
+                Click="FlipButton" />
+        <StackPanel x:Name="Bot2StackPanel"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Grid.Column="1" Grid.Row="2">
+            <materialDesign:Flipper Width="40" Height="80" Margin="0,0,5,0">
+                <materialDesign:Flipper.FrontContent>
+                    <Border Background="{DynamicResource MaterialDesignDarkBackground}"
+                            Width="40" Height="80"
+                            CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <materialDesign:PackIcon Kind="Cards"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center"
+                                             Height="auto"
+                                             Width="30"
+                                             Foreground="{DynamicResource MaterialDesignBackground}" />
+                    </Border>
+                </materialDesign:Flipper.FrontContent>
+                <materialDesign:Flipper.BackContent>
+                    <Button Content="Перевернуть обратно" Width="150"
+                        Command="{x:Static materialDesign:Flipper.FlipCommand}"/>
+                </materialDesign:Flipper.BackContent>
+            </materialDesign:Flipper>
+            <materialDesign:Flipper Width="40" Height="80" Margin="0,0,5,0">
+                <materialDesign:Flipper.FrontContent>
+                    <Border Background="{DynamicResource MaterialDesignDarkBackground}"
+                            Width="40" Height="80"
+                            CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <materialDesign:PackIcon Kind="Cards"
+                                             HorizontalAlignment="Center"
+                                             VerticalAlignment="Center"
+                                             Height="auto"
+                                             Width="30"
+                                             Foreground="{DynamicResource MaterialDesignBackground}" />
+
+                    </Border>
+                </materialDesign:Flipper.FrontContent>
+                <materialDesign:Flipper.BackContent>
+                    <Button Content="Перевернуть обратно" Width="150"
+                        Command="{x:Static materialDesign:Flipper.FlipCommand}"/>
+                </materialDesign:Flipper.BackContent>
+            </materialDesign:Flipper>
+        </StackPanel>
+    </Grid>
+</Window>
